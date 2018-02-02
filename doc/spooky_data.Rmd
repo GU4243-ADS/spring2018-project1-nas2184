@@ -1,7 +1,7 @@
 ---
-title: "Some Simple SPOOKY Data Analysis"
-author: "Cindy Rush"
-date: "January 22, 2018"
+title: "Project 1: Text Analysis using SPOOKY data"
+author: "Nicole Smith"
+date: "February 5, 2018"
 output:
   pdf_document: default
   html_document: default
@@ -9,7 +9,9 @@ output:
 
 # Introduction
 
-This files contains some simple analysis of the SPOOKY data.  The goal is to remind ourselves of some of our basic tools for working with text data in `R` and also to practice reproducibility.  You should be able to put this file in the `doc` folder of your `Project 1` repository and it should just run (provided you have `multiplot.R` in the `libs` folder and `spooky.csv` in the `data` folder).  If you open to file from a forked `Week1-GitHub` repo, you should have no trouble running the code directly.
+[Rewrite the introduction to explain some of the analysis and the original setup.]
+
+This files contains some simple analysis of the SPOOKY data.  The goal is to remind ourselves of some of our basic tools for working with text data in `R` and also to practice reproducibility.  You should be able to put this file in the `doc` folder of your `Project 1` repository and it should just run (provided you have `multiplot.R` in the `libs` folder and `spooky.csv` in the `data` folder).  If you open to file from a forked `Week1-GitHub` repo, you should have no trouble running the code directly. 
 
 ## Setup the libraries
 First we want to install and load libraries we need along the way.  Note that the following code is completely reproducible -- you don't need to add any code on your own to make it run.
@@ -70,6 +72,29 @@ spooky$author <- as.factor(spooky$author)
 
 For my tutorials on Project 1, I will be using `tidytext`.  If this is new to you, here's a textbook that can help: *[Text Mining with R; A Tidy Approach](https://www.tidytextmining.com)*.  It teaches the basic handling of natural language data in `R` using tools from the "tidyverse".  The tidy text format is a table with one token per row, where a token is a word.
 
+## Using n-grams
+```{r}
+# Subset data to MWS only and make bigrams
+mws_bigrams <- spooky %>% 
+  filter(author == "MWS") %>% 
+  unnest_tokens(bigram, text, token = "ngrams", n = 2)
+
+mws_bigrams %>% 
+  count(bigram, sort = TRUE)
+
+# Split bigram into one word per column
+mws_split <- mws_bigrams %>% 
+  separate(bigram, c("word1", "word2"), sep = " ")
+
+mws_filtered <- mws_split %>% 
+  filter(!word1 %in% stop_words$word) %>% 
+  filter(!word2 %in% stop_words$word) 
+#understand what the stop_words$word; wouldn't this remove the "not"?
+
+# group_by stop words? investigate the negation of words for analysis
+
+```
+
 
 ### Data Cleaning
 
@@ -83,7 +108,7 @@ head(stop_words)
 tail(stop_words)
 spooky_wrd <- anti_join(spooky_wrd, stop_words, by = "word")
 head(spooky_wrd)
-````
+```
 
 ### Data Visualization
 
