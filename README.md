@@ -72,7 +72,9 @@ In this text analysis, investigating punctuation and character names, as well as
 ### Citations
 Some of the above work was adapted from the following posts:
 <https://www.kaggle.com/headsortails/treemap-house-of-horror-spooky-eda-lda-features.>
+
 <https://www.kaggle.com/ambarish/tutorial-detailed-spooky-fun-eda-and-modelling>
+
 <https://www.tidytextmining.com/ngrams.html>
 
 ```
