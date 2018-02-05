@@ -45,7 +45,7 @@ From the wordclouds, we know that some authors favor certain words over other, b
 ### What are we missing?
 Because authors have different personalities and styles, we look at the use of negation to convey meaning in their horror fiction stories.
 
-![image](figs/mws_not.png)
+![image](figs/Wordcloud_mws_not.png)
 
 When looking at the negated words for Shelley, it is interesting that “die” or rather “not die” is the most frequently used word, when her previous wordcloud shows “life” as important for her literary style. It is also interesting that “not love” appears with a similar frequency as above. Although Shelley appears to be more positive than the other two authors in the word frequency comparison above, it is possible from this textual analysis that she is negating these positive words, such as “love,” “hope,” and “feel.” Another step in predicting author identification could be to distinguish between the use of "die" and "not die" among each author, as these are used in varying degrees and convey different meanings.
 
