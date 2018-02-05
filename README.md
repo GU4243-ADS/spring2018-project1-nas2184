@@ -27,7 +27,7 @@ By looking at the median sentence length, we see that HP Lovecraft, tends to hav
 From the above figure, we see that Lovecraft and Shelley tend to have sentences with word length between 75 and 100, whereas Poe has sentences that have a wide range of word lengths with a dip around 65. Although we are closer to building a predictive model, there is still much variability in word length between and among authors. Maybe some contextual analysis will help us to understand how to categorize each other.
 
 ### Who elicits pausing among readers?
-Commas, semicolons, and colons signal to the reader that she should pause in her understanding and potentially absorb the clause before. This "pausing" may create anticipation among readers, and one might predict that horror fiction authors are attempting to illicit feelings of anticipation and fear among their readers.
+Commas, semicolons, and colons signal to the reader that she should pause in her understanding and potentially absorb the clause before. This "pausing" may create anticipation among readers, and one might predict that horror fiction authors are attempting to elicit feelings of anticipation and fear among their readers.
 
 ![image](figs/commas.png)
 
