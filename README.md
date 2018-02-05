@@ -56,7 +56,7 @@ In the entire corpus, we see that there are slightly more positive than negative
 
 When looking at the sentiments of each author, we can somewhat confirm our initial conjecture that MWS is more positive than the other two authors. ALthough EAP is more positive than negative and only slightly less positive than MWS, HPL is much more negative than he is positive. HPL has fewer words that are classified as “anticipation,” which is interesting since he also does not use punctuation to build anticipation among his readers. However, the lexicon is crowd-sourced, and it is possible that HPL uses words that we not categorized in this particular lexicon.
 
-![image](figs/sentiments3.png)
+![image](figs/sentiment3.png)
 
 The lexicons appear to classify the authors in similar manners (at least directionally). All three illustrate that HPL is the most negative of the three authors, and MWS and EAP are somewhere in between negative and positive. It is important to note the difference in scales. While AFINN and Bing range from -4000 to 0, NRC ranges from -1000 to 1000.
 
